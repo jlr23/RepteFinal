@@ -27,4 +27,4 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-src/servicies/*
+src/servicies/wether.js

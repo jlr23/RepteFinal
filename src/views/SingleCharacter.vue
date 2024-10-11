@@ -35,14 +35,14 @@ onMounted(async () => {
             ...character2.value
         }
 
-        if (character.value && character.value.Latitude && character.value.Longitude) {
+        /*if (character.value && character.value.Latitude && character.value.Longitude) {
             await wetherApi.getWether(character.value.Latitude, character.value.Longitude).then((response) => {
                 wether.value = response.data;
                 console.log(wether);
             });
         } else {
             throw new Error("Latitud o Longitud indefinida en el personatge");
-        }
+        }*/
 
     } catch (error) {
         error.value = 'Error al carregar personatges: ' + error.message
@@ -108,7 +108,7 @@ const getGlowColor = (race) => {
     }
 }
 
-const weatherIcon = (weather) => {
+/*const weatherIcon = (weather) => {
     switch (weather) {
         case 'Rain':
             return 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rain.svg'
@@ -131,7 +131,7 @@ const weatherIcon = (weather) => {
         default:
             return 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/not-available.svg'
     }
-}
+}*/
 
 const toggleDescription = () => {
     showDescription.value = !showDescription.value
@@ -161,7 +161,7 @@ const toggleDescription = () => {
                     </div>
                 </div>
             </section>
-            <section v-if="!loading && wether" class="card_weather">
+            <!--<section v-if="!loading && wether" class="card_weather">
                 <h2>Weather</h2>
                 <p v-if="wether.name"><strong>City: </strong>{{ wether.name }}</p>
                 <p v-if="wether.weather && wether.weather.length > 0">
@@ -172,7 +172,7 @@ const toggleDescription = () => {
                 </p>
                 <img v-if="wether.weather && wether.weather.length > 0" alt="weatherIMG"
                     :src="weatherIcon(wether.weather[0].main)">
-            </section>
+            </section>-->
         </div>
 
 
