@@ -5,7 +5,7 @@ import { ref, onMounted } from "vue";
 import { RouterLink } from "vue-router";
 import { addIcons } from 'oh-vue-icons';
 import { CoReload } from 'oh-vue-icons/icons';
-import wetherApi from "@/servicies/wether.js";
+//import wetherApi from "@/servicies/wether.js";
 
 addIcons(CoReload)
 
